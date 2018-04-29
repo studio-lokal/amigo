@@ -1,7 +1,9 @@
+const path = require('path');
+
 module.exports = {
     width: 300,
     height: 400,
-    dir: __dirname,
+    dir: path.join(__dirname, 'views'),
     naverApi: {
       detect: 'https://openapi.naver.com/v1/papago/detectLangs',
       translate: 'https://openapi.naver.com/v1/papago/n2mt'

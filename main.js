@@ -1,7 +1,7 @@
 const ipcMain = require('electron').ipcMain;
 const menubar = require('menubar');
 
-const apis = require('./apis')
+const apis = require('./lib/apis')
 const config = require('./config')
 
 
