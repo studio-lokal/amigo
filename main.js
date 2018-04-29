@@ -31,3 +31,6 @@ ipcMain.on('search', (e, text) => {
     })
 })
 
+ipcMain.on('hide', () => {
+  mb.app.hide()
+})

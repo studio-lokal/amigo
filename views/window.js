@@ -59,6 +59,5 @@ function toast () {
 
 const closeBtn = document.getElementById('close-window');
 closeBtn.onclick = function() {
-  let w = remote.getCurrentWindow();
-  w.minimize();
+  ipcRenderer.send('hide');
 }
