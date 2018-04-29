@@ -53,6 +53,10 @@ html, body {
   border: none;
 }
 
+.amigo__header--close:active, .amigo__header--close:hover {
+  opacity: .5;
+}
+
 .amigo__asis {
   height: calc((100% - 170px)/2);
   padding: 15px 20px;
@@ -109,3 +113,7 @@ html, body {
   color: #ffffff;
   text-decoration: #ffffff underline;
 }
+
+.amigo__tobe span:hover, .amigo__tobe span:active {
+  opacity: .5;
+} 
