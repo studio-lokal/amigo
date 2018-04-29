@@ -1,6 +1,8 @@
 # Amigo
 Naver Papago Client for Mac OS built with [Electron](https://electronjs.org/)
 
+![Amigo](https://github.com/ftto/amigo/blob/gh-pages/screenshot.png)
+
 # Development
 1. Add Naver API Keys
 - Register Naver API on [here](https://developers.naver.com/apps/#/register)
