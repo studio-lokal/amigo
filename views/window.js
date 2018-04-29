@@ -1,4 +1,5 @@
 const {ipcRenderer} = require('electron');
+const {remote} = require('electron');
 
 const button = window.document.getElementById('btn-search');
 button.onclick = function () {
@@ -41,3 +42,9 @@ function copy () {
     document.execCommand("copy");
   }
 } 
+
+const close_btn = document.getElementById('close-window');
+close_btn.onclick = function() {
+  let w = remote.getCurrentWindow();
+  w.minimize();
+}
