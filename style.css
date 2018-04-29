@@ -1,0 +1,111 @@
+@font-face {
+  font-family: AppleGothic;
+  src: local("Apple SD Gothic Neo");
+}
+@font-face {
+  font-family: Times;
+  src: local("Apple SD Gothic Neo");
+}
+
+html, body {
+  background-color: #ffffff;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Apple SD Gothic Neo', 'AppleGothic', Apple SD Gothic Neo !important;
+}
+
+.fz10 {
+  font-size: 10px !important;
+}
+.fz20 {
+  font-size: 20px !important;
+}
+.fz40 {
+  font-size: 40px !important;
+}
+
+.amigo__header {
+  background: transparent;
+  height: 40px;
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.amigo__header--logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+}
+
+.amigo__header--close {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  background: url(./img/close.png) no-repeat center;
+  outline: 0;
+  border: none;
+}
+
+.amigo__asis {
+  height: calc((100% - 170px)/2);
+  padding: 15px 20px;
+  position: relative;
+}
+
+.amigo__asis textarea {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+.amigo__asis button {
+  display: none;
+}
+
+.amigo__tobe {
+  background-color: #00aeff;
+  height: calc((100% - 140px)/2);
+  padding: 35px 20px;
+  position: relative;
+}
+
+.amigo__tobe textarea {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  height: 100%;
+  pointer-events: none;
+  outline: 0;
+  overflow-x: hidden;
+  resize: none;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.amigo__tobe span {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  right: 12px;
+  color: #ffffff;
+  text-decoration: #ffffff underline;
+}

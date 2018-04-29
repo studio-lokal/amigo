@@ -1,0 +1,19 @@
+{
+  "name": "amigo",
+  "version": "1.0.0",
+  "description": "Papago Client for Mac OS",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "menubar": "^5.2.3",
+    "superagent": "^3.8.2"
+  },
+  "devDependencies": {
+    "electron": "^1.8.6",
+    "electron-packager": "^12.0.1"
+  },
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-packager . Amigo --platform=darwin --arch=x64 --version=1.8.6 --icon=Icon.icns",
+    "start": "electron ."
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+yarn-error.log
+
+# Environment Variables
+.env
+
+# Released Apps
+Amigo-darwin-x64
