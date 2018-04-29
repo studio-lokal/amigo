@@ -3,5 +3,6 @@ title: Amigo
 description: Papago Client for Mac OS
 show_downloads: true
 version: 1.0.0
+google_analytics: UA-118378824-1
 github:
   zip_url: https://www.dropbox.com/home/Apps/amigo
