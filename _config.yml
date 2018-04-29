@@ -2,4 +2,5 @@ theme: jekyll-theme-cayman
 title: Amigo
 description: Papago Client for Mac OS
 show_downloads: true
-github.zip_url: https://www.dropbox.com/s/0g7gpxvn7vjwqj3/Defol-1.0.0-mac.zip?dl=0
+github:
+  zip_url: https://www.dropbox.com/s/0g7gpxvn7vjwqj3/Defol-1.0.0-mac.zip?dl=0
