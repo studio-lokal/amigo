@@ -1,4 +1,5 @@
 # Amigo
+![Amigo](https://github.com/ftto/amigo/blob/gh-pages/screenshot.png)
 ## Updates
 
 #### 2018-04-29 - v1.0.0
