@@ -8,6 +8,7 @@
 ## Contributors
 - [Hoony Chang](https://github.com/the6thm0nth)
 - [Saemii](https://github.com/amiru11) - Maintainer
+- [Aki](https://github.com/hjmkay) 
 - [Jingyu](https://www.behance.net/iamleejingyu) - Designer
 
 ## Contribute
