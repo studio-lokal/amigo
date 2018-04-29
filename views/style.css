@@ -117,3 +117,44 @@ html, body {
 .amigo__tobe span:hover, .amigo__tobe span:active {
   opacity: .5;
 } 
+
+.amigo__tobe div {
+  visibility: hidden;
+  min-width: 50px;
+  background-color: #ffffff;
+  color: #00aeff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px; 
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  top: 35px;
+}
+
+.amigo__tobe div.active {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* animation */
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 35px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 35px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 35px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 35px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}

@@ -40,11 +40,25 @@ function copy () {
   
     /* Copy the text inside the text field */
     document.execCommand("copy");
+
+    toast();
   }
 } 
 
-const close_btn = document.getElementById('close-window');
-close_btn.onclick = function() {
+function toast () {
+  const toastEle = document.getElementById('toaster');
+
+  console.log(toastEle.classList);
+
+  // Add the "show" class to DIV
+  toastEle.className= 'active';
+
+  // After 3 seconds, remove the active class
+  setTimeout(function(){ toastEle.className = toastEle.className.replace("active", ""); }, 3000);
+}
+
+const closeBtn = document.getElementById('close-window');
+closeBtn.onclick = function() {
   let w = remote.getCurrentWindow();
   w.minimize();
 }
