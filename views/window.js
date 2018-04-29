@@ -48,8 +48,6 @@ function copy () {
 function toast () {
   const toastEle = document.getElementById('toaster');
 
-  console.log(toastEle.classList);
-
   // Add the "show" class to DIV
   toastEle.className= 'active';
 
