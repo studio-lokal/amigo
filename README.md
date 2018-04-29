@@ -2,12 +2,14 @@
 Naver Papago Client for Mac OS built with [Electron](https://electronjs.org/)
 
 # Development
-1. edit .env
+1. Add Naver API Keys
+- Register Naver API on [here](https://developers.naver.com/apps/#/register)
+- Add keys to .env file
 ```bash
 mv .env.example .env
 ```
 
-2. start to develop
+2. Start to develop
 ```bash
 yarn start
 ```
