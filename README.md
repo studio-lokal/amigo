@@ -24,7 +24,7 @@ yarn build
 # Contributors
 - [Hoony Chang](https://github.com/the6thm0nth)
 - [Saemii](https://github.com/amiru11)
-- Jingyu (Designer)
+- [Jingyu](https://www.behance.net/iamleejingyu) (Designer)
 
 # License
 [MIT License](LICENSE)
