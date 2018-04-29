@@ -8,7 +8,7 @@
 ## Contributors
 - [Hoony Chang](https://github.com/the6thm0nth)
 - [Saemii](https://github.com/amiru11) - Maintainer
-- Jingyu - Designer
+- [Jingyu](https://www.behance.net/iamleejingyu) - Designer
 
 ## Contribute
 Feel free to open a new pull request to [repository](https://github.com/ftto/amigo)
