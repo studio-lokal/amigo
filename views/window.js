@@ -9,6 +9,14 @@ button.onclick = function () {
     ipcRenderer.once('async-search', (e, success, result) => {
       if (success) {
         window.document.getElementById('translated-text').value = result
+
+        if (result.length > 60) {
+          window.document.getElementById('translated-text').style.fontSize= "16px";
+        } else if (result.length > 30) {
+          window.document.getElementById('translated-text').style.fontSize= "27px";
+        } else {
+          window.document.getElementById('translated-text').style.fontSize= "40px";
+        }
       } else {
         // TODO: 에러 처리
       }
@@ -24,7 +32,17 @@ const searchPress = function (e) {
   return true;
 }
 const search = window.document.getElementById('text');
-search.onkeypress = function (event) {
+search.onkeyup = function (event) {
+  const text = window.document.getElementById('text').value
+
+  if (text.length > 60) {
+    window.document.getElementById('text').style.fontSize= "16px";
+  } else if (text.length > 30) {
+    window.document.getElementById('text').style.fontSize= "27px";
+  } else {
+    window.document.getElementById('text').style.fontSize= "40px";
+  }
+
   return searchPress(event);
 }
 
@@ -37,13 +55,13 @@ function copy () {
   if (copyText.value) {
     /* Select the text field */
     copyText.select();
-  
+
     /* Copy the text inside the text field */
     document.execCommand("copy");
 
     toast();
   }
-} 
+}
 
 function toast () {
   const toastEle = document.getElementById('toaster');
