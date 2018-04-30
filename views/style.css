@@ -58,7 +58,7 @@ html, body {
 
 .amigo__asis {
   height: calc((100% - 170px) / 2);
-  padding: 0 20px 35px;
+  padding: 0 12px 35px 20px;
   position: relative;
 }
 
@@ -71,7 +71,7 @@ html, body {
   resize: none;
   overflow-x: hidden;
   word-wrap: break-word;
-  padding: 0;
+  padding: 0 8px 0 0;
   font-size: 40px;
 }
 
@@ -82,7 +82,7 @@ html, body {
 .amigo__tobe {
   background-color: #00aeff;
   height: calc((100% - 140px)/2);
-  padding: 35px 20px;
+  padding: 35px 12px 35px 20px;
   position: relative;
 }
 
@@ -90,7 +90,6 @@ html, body {
   background: transparent;
   border: 0;
   color: #ffffff;
-  padding: 0;
   cursor: pointer;
   height: 100%;
   /* pointer-events: none; */
@@ -100,6 +99,7 @@ html, body {
   width: 100%;
   word-wrap: break-word;
   font-size: 40px;
+  padding: 0 8px 0 0;
 }
 
 .amigo__tobe span {
@@ -169,4 +169,31 @@ html, body {
 @keyframes fadeout {
   from {top: 35px; opacity: 1;}
   to {top: 0; opacity: 0;}
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+  position: absolute;
+  margin-right: -10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 1.5px;
+  border-radius: 1.5px;
+  background:#eee;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1.5px;
+  border-radius: 1.5px;
+  background: #00aeff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00aeff;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background:#9ebfce;
 }
