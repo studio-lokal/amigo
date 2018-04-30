@@ -195,5 +195,23 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-  background:#9ebfce;
+  background:#00aeff;
+}
+
+
+
+.amigo__tobe textarea::-webkit-scrollbar-track {
+  background:#0095da;
+}
+
+.amigo__tobe textarea::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+.amigo__tobe textarea::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.amigo__tobe textarea::-webkit-scrollbar-thumb:window-inactive {
+  background:#fff;
 }
