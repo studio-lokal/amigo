@@ -1,6 +1,6 @@
 {
   "name": "amigo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Papago Client for Mac OS",
   "dependencies": {
     "dotenv": "^5.0.1",
