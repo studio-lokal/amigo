@@ -5,6 +5,7 @@
 #### 2018-04-30 - v1.0.1
 - UI Improvement
     - Support Long Text
+
 #### 2018-04-29 - v1.0.0
 - Launching
 
