@@ -13,7 +13,7 @@
   },
   "main": "main.js",
   "scripts": {
-    "build": "electron-packager . Amigo --platform=darwin --arch=x64 --version=1.8.6 --icon=Icon.icns",
+    "build": "electron-packager . Amigo --platform=darwin --arch=x64 --version=1.8.6 --icon=icon.icns",
     "start": "electron ."
   }
 }

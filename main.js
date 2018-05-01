@@ -4,8 +4,6 @@ const menubar = require('menubar');
 const apis = require('./lib/apis')
 const config = require('./config')
 
-
-
 const mb = menubar({
   width: config.width,
   height: config.height,
