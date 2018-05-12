@@ -17,7 +17,9 @@ mb.on('ready', function ready() {
 ipcMain.on('search', (e, text) => {
   apis.detect(text)
     .then(res => {
-      return apis.translate({ source: res.body.langCode, text })
+      // response example : { "langCode" : "ko" }
+      let query = apis.setTranslateQuery({ source: res.body.langCode, text });
+      return apis.translate(query);
     })
     .then(res => {
       const translatedText = res.body.message.result.translatedText
