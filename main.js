@@ -29,7 +29,7 @@ ipcMain.on("search", (e, text) => {
       if (!isSupported(query)) {
         throw `아직 ${langCodes[query.source].name}에서 ${
           langCodes[query.target].name
-        }로 번역할 줄은 모르겠어요.`;
+        }로 번역할 줄은 몰라요.`;
       } else {
         return apis.translate(query);
       }
