@@ -9,5 +9,6 @@ module.exports = {
     detect: "https://openapi.naver.com/v1/papago/detectLangs",
     translate: "https://openapi.naver.com/v1/papago/n2mt"
   },
+  minWidth: 300,
   languageSet: languageSet
 };

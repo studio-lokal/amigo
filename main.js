@@ -11,7 +11,8 @@ const langCodes = config.languageSet.langCodes;
 const mb = menubar({
   width: config.width,
   height: config.height,
-  dir: config.dir
+  dir: config.dir,
+  minWidth: config.minWidth
 });
 
 mb.on("ready", function ready() {
