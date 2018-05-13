@@ -19,6 +19,8 @@ button.onclick = function () {
         }
       } else {
         // TODO: 에러 처리
+        window.document.getElementById('translated-text').value = "에러가 발생했어요.."
+
       }
     })
 };
