@@ -1,0 +1,98 @@
+{
+  "langInfo": {
+    "numOfLangCodes": 15,
+    "numOfTranslationKeys": 10,
+    "numOfTranslationSets": 10,
+    "detactKeys": [
+      "ko",
+      "en",
+      "zh-cn",
+      "zh-tw",
+      "ja",
+      "es",
+      "fr",
+      "vi",
+      "th",
+      "id",
+      "ru",
+      "pt",
+      "de",
+      "hi",
+      "unk"
+    ],
+    "translationKeys": [
+      "ko",
+      "en",
+      "zh-CN",
+      "zh-TW",
+      "ja",
+      "es",
+      "fr",
+      "vi",
+      "th",
+      "id"
+    ]
+  },
+  "langCodes": {
+    "ko": {
+      "name": "한국어",
+      "supportedTargets": ["en", "zh-CN", "zh-TW", "es", "fr", "vi", "th", "id"]
+    },
+    "en": {
+      "name": "영어",
+      "supportedTargets": ["ko", "ja", "fr"]
+    },
+    "fr": {
+      "name": "프랑스어",
+      "supportedTargets": ["ko", "en"]
+    },
+    "zh-CN": {
+      "name": "중국어 간체",
+      "supportedTargets": ["ko"]
+    },
+    "zh-TW": {
+      "name": "중국어 번체",
+      "supportedTargets": ["ko"]
+    },
+    "es": {
+      "name": "스페인어",
+      "supportedTargets": ["ko"]
+    },
+    "vi": {
+      "name": "베트남어",
+      "supportedTargets": ["ko"]
+    },
+    "th": {
+      "name": "태국어",
+      "supportedTargets": ["ko"]
+    },
+    "id": {
+      "name": "인도네시아어",
+      "supportedTargets": ["ko"]
+    },
+    "ja": {
+      "name": "일본어",
+      "supportedTargets": ["ko"]
+    },
+    "ru": {
+      "name": "러시아어",
+      "supportedTargets": []
+    },
+    "pt": {
+      "name": "포르투칼어",
+      "supportedTargets": []
+    },
+    "hi": {
+      "name": "힌디어",
+      "supportedTargets": []
+    },
+    "de": {
+      "name": "독일어",
+      "supportedTargets": []
+    },
+    "unk": {
+      "name": "알수없음",
+      "supportedTargets": []
+    }
+  }
+}
