@@ -1,34 +1,36 @@
-const ipcMain = require('electron').ipcMain;
-const menubar = require('menubar');
+const ipcMain = require("electron").ipcMain;
+const menubar = require("menubar");
 
-const apis = require('./lib/apis')
-const config = require('./config')
+const apis = require("./lib/apis");
+const config = require("./config");
 
 const mb = menubar({
   width: config.width,
   height: config.height,
-  dir: config.dir
+  dir: config.dir,
+  minWidth: config.minWidth
 });
 
-mb.on('ready', function ready() {
+mb.on("ready", function ready() {
   // main process
-})
+});
 
-ipcMain.on('search', (e, text) => {
-  apis.detect(text)
+ipcMain.on("search", (e, text) => {
+  apis
+    .detect(text)
     .then(res => {
-      return apis.translate({ source: res.body.langCode, text })
+      return apis.translate({ source: res.body.langCode, text });
     })
     .then(res => {
-      const translatedText = res.body.message.result.translatedText
-      e.sender.send('async-search', true, translatedText)
+      const translatedText = res.body.message.result.translatedText;
+      e.sender.send("async-search", true, translatedText);
     })
     .catch(err => {
-      console.error(err)
-      e.sender.send('async-search', false, err)
-    })
-})
+      console.error(err);
+      e.sender.send("async-search", false, err);
+    });
+});
 
-ipcMain.on('hide', () => {
-  mb.app.hide()
-})
+ipcMain.on("hide", () => {
+  mb.app.hide();
+});
