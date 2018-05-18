@@ -3,13 +3,15 @@ const { remote } = require("electron");
 
 const button = window.document.getElementById("btn-search");
 button.onclick = function() {
-  const text = window.document.getElementById("text").value;
+  const text = window.document.getElementById("text").value.trim();
+  const target = "";
 
-  ipcRenderer.send("search", text);
+  ipcRenderer.send("search", { text, target });
   ipcRenderer.once("async-search", (e, success, result) => {
     if (success) {
       window.document.getElementById("translated-text").value = result;
     } else {
+      // should subdivide error handling.
       window.document.getElementById("translated-text").value = result;
     }
 
@@ -31,6 +33,7 @@ const searchPress = function(e) {
   e = e || window.event;
   if (e.keyCode == 13) {
     document.getElementById("btn-search").click();
+    setSourceText(getSourceText().trim());
     return false;
   }
   return true;
@@ -87,3 +90,12 @@ const closeBtn = document.getElementById("close-window");
 closeBtn.onclick = function() {
   ipcRenderer.send("hide");
 };
+
+function getSourceText() {
+  return window.document.getElementById("translated-text").value;
+}
+
+function setSourceText(text) {
+  window.document.getElementById("translated-text").value = text;
+  return text;
+}
