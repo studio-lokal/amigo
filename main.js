@@ -73,7 +73,6 @@ function isSupported({ source, target } = {}) {
 }
 
 function requestTranslate({ source, target, text } = {}) {
-  console.log(source, target, text);
   return new Promise((resolve, reject) => {
     apis
       .translate({ source, target, text })
@@ -91,12 +90,10 @@ function requestTranslate({ source, target, text } = {}) {
 
 function sendTranslatedText(e, result) {
   // we may send a result Object including translatedText, source, target, text etc.
-  console.log(result);
   e.sender.send("async-search", true, result.translatedText);
 }
 
 function errorHandling(e, err) {
-  console.log(err);
   let message = "에러가 났네요. 다시 한 번 시도해주세요 :D";
   if (err.name === "DetactError" || err.name === "TranslateError") {
     message = err.message;
@@ -112,6 +109,5 @@ function errorHandling(e, err) {
       else message += ": 다시 한 번 시도해주세요.";
     }
   }
-  console.log(message);
   e.sender.send("async-search", false, message);
 }

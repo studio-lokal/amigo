@@ -29,7 +29,7 @@ const searchPress = function(e) {
 };
 const search = window.document.getElementById("text");
 search.onkeyup = function(event) {
-  const text = window.document.getElementById("text").value;s
+  const text = window.document.getElementById("text").value;
   setTextFontSize(text, "text");
   return searchPress(event);
 };
