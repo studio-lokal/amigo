@@ -108,7 +108,7 @@ function errorHandling(e, err) {
       else message += ": 다시 한 번 시도해주세요.";
     } else if (errorCode.startsWith('N2MT')) {
       message = "번역 오류";
-      if (errorCode == "N2MT08") message += ": 문장이 너무 길어요!";
+      if (errorCode == "N2MT08") message += ": 문장이 너무 길어요!"; // up to 5000 characters.
       else message += ": 다시 한 번 시도해주세요.";
     }
   }

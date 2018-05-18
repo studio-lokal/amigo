@@ -14,18 +14,7 @@ button.onclick = function() {
       // should subdivide error handling.
       window.document.getElementById("translated-text").value = result;
     }
-
-    if (result.length > 60) {
-      window.document.getElementById("translated-text").style.fontSize = "16px";
-    } else if (result.length > 45) {
-      window.document.getElementById("translated-text").style.fontSize = "22px";
-    } else if (result.length > 30) {
-      window.document.getElementById("translated-text").style.fontSize = "27px";
-    } else if (result.length > 15) {
-      window.document.getElementById("translated-text").style.fontSize = "32px";
-    } else {
-      window.document.getElementById("translated-text").style.fontSize = "40px";
-    }
+    setTextFontSize(result, "translated-text");
   });
 };
 
@@ -40,20 +29,8 @@ const searchPress = function(e) {
 };
 const search = window.document.getElementById("text");
 search.onkeyup = function(event) {
-  const text = window.document.getElementById("text").value;
-
-  if (text.length > 60) {
-    window.document.getElementById("text").style.fontSize = "16px";
-  } else if (text.length > 45) {
-    window.document.getElementById("text").style.fontSize = "22px";
-  } else if (text.length > 30) {
-    window.document.getElementById("text").style.fontSize = "27px";
-  } else if (text.length > 15) {
-    window.document.getElementById("text").style.fontSize = "32px";
-  } else {
-    window.document.getElementById("text").style.fontSize = "40px";
-  }
-
+  const text = window.document.getElementById("text").value;s
+  setTextFontSize(text, "text");
   return searchPress(event);
 };
 
@@ -98,4 +75,19 @@ function getSourceText() {
 function setSourceText(text) {
   window.document.getElementById("translated-text").value = text;
   return text;
+}
+
+function setTextFontSize(text, elementId) {
+  if (text.length > 60) {
+    window.document.getElementById(elementId).style.fontSize = "16px";
+  } else if (text.length > 45) {
+    window.document.getElementById(elementId).style.fontSize = "22px";
+  } else if (text.length > 30) {
+    window.document.getElementById(elementId).style.fontSize = "27px";
+  } else if (text.length > 15) {
+    window.document.getElementById(elementId).style.fontSize = "32px";
+  } else {
+    window.document.getElementById(elementId).style.fontSize = "40px";
+  }
+  return text.length;
 }
