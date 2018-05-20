@@ -2,7 +2,7 @@ theme: jekyll-theme-cayman
 title: Amigo
 description: Papago Client for Mac OS
 show_downloads: true
-version: 1.0.1
+version: 1.1.0
 google_analytics: UA-118378824-1
 github:
-  zip_url: https://drive.google.com/open?id=13UxeYKAJ23lQ_RTOsXUks_LGyESm05tr
+  zip_url: https://github.com/ftto/amigo/releases/download/v1.1.0/Amigo-v1.1.0.zip
