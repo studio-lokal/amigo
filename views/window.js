@@ -21,8 +21,9 @@ button.onclick = function() {
 const searchPress = function(e) {
   e = e || window.event;
   if (e.keyCode == 13) {
+    e.preventDefault();
     document.getElementById("btn-search").click();
-    setSourceText(getSourceText().trim());
+    setSourceText(removeLineBreak(getSourceText()));
     return false;
   }
   return true;
@@ -69,11 +70,11 @@ closeBtn.onclick = function() {
 };
 
 function getSourceText() {
-  return window.document.getElementById("translated-text").value;
+  return window.document.getElementById("text").value;
 }
 
 function setSourceText(text) {
-  window.document.getElementById("translated-text").value = text;
+  window.document.getElementById("text").value = text;
   return text;
 }
 
@@ -90,4 +91,8 @@ function setTextFontSize(text, elementId) {
     window.document.getElementById(elementId).style.fontSize = "40px";
   }
   return text.length;
+}
+
+function removeLineBreak(str) {
+  return str.replace(/(\r\n|\n|\r)/gm, "");
 }
