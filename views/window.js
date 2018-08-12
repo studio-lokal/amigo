@@ -1,11 +1,11 @@
 const { ipcRenderer } = require("electron");
 const { remote } = require("electron");
 
+let target = "";
 const button = window.document.getElementById("btn-search");
 button.onclick = function() {
   const text = window.document.getElementById("text").value.trim();
-  const target = "";
-
+  console.log('target:: ' + target);
   ipcRenderer.send("search", { text, target });
   ipcRenderer.once("async-search", (e, success, result) => {
     if (success) {
@@ -36,6 +36,43 @@ search.onkeyup = function(event) {
 };
 
 window.document.getElementById("copy").onclick = copy;
+
+// dropdown action
+// 1. button click,
+const dropdown = window.document.querySelector('.dropdown button');
+dropdown.onclick = function() {
+  if(this.parentNode.classList.contains('open')) {
+    this.parentNode.classList.remove('open');
+  } else {
+    this.parentNode.classList.add('open');
+  }
+}
+// 2. list item click
+const dropdownItems = window.document.querySelectorAll('.dropdown-item');
+
+dropdownItems.forEach(item => {
+  item.addEventListener('click', changingLanguage);
+})
+function changingLanguage () {
+  switch (this.getAttribute('value')) {
+    case 'ko':
+      dropdown.textContent = 'Korean';
+      break;
+    case 'en':
+      dropdown.textContent = 'English';
+      target = 'en';
+      break;
+    case 'fr':
+      dropdown.textContent = 'French';
+      target = 'fr';
+      break;
+    default:
+      break;
+  }
+}
+// dropdownItem.onclick = function() {
+//   console.log(this.getAttribute('value'));
+// }
 
 function copy() {
   /* Get the text field */
