@@ -2,12 +2,21 @@
 <head>
     <title>Amigo</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dropdown.css">
 </head>
 
 <body>
   <div class="amigo">
     <div class="amigo__header">
       <img class="amigo__header--logo" src="./img/logo.png" alt="">
+      <div class="dropdown default-dropdown">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown">Select</button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item" value="ko">Korean</li>
+          <li class="dropdown-item" value="en">English</li>
+          <li class="dropdown-item" value="fr">French</li>
+        </ul>
+      </div>
       <button id="close-window" class="amigo__header--close"></button>
     </div>
     <div class="amigo__asis">
