@@ -1,5 +1,9 @@
 const { ipcRenderer } = require("electron");
 const { remote } = require("electron");
+const config = require("../config");
+
+const langInfo = config.languageSet.langInfo;
+const langCodes = config.languageSet.langCodes;
 
 let target = "";
 const button = window.document.getElementById("btn-search");
@@ -38,15 +42,35 @@ search.onkeyup = function(event) {
 window.document.getElementById("copy").onclick = copy;
 
 // dropdown action
+const dropdownMenu = window.document.querySelector('.dropdown-menu');
 // 1. button click,
-const dropdown = window.document.querySelector('.dropdown button');
-dropdown.onclick = function() {
+const dropdownButton = window.document.querySelector('.dropdown button');
+dropdownButton.onclick = function() {
   if(this.parentNode.classList.contains('open')) {
     this.parentNode.classList.remove('open');
   } else {
     this.parentNode.classList.add('open');
   }
 }
+
+// langInfo.translationKeys.forEach(lang => {
+//   if(lang !== 'unk') {
+//     const dropdownItem = document.createElement('li');
+//     dropdownItem.classList.add('dropdown-item');
+//     dropdownItem.setAttribute('value', lang);
+//     console.log(lang)
+//     dropdownMenu.appendChild(dropdownItem);
+//   }
+// });
+Object.keys(langCodes).forEach(key => {
+  const dropdownItem = document.createElement('li');
+  dropdownItem.classList.add('dropdown-item');
+  dropdownItem.setAttribute('value', key);
+  dropdownItem.textContent = langCodes[key].name;
+  dropdownMenu.appendChild(dropdownItem);
+  console.log(key, langCodes[key]);
+});
+
 // 2. list item click
 const dropdownItems = window.document.querySelectorAll('.dropdown-item');
 
@@ -56,14 +80,14 @@ dropdownItems.forEach(item => {
 function changingLanguage () {
   switch (this.getAttribute('value')) {
     case 'ko':
-      dropdown.textContent = 'Korean';
+      dropdownButton.textContent = 'Korean';
       break;
     case 'en':
-      dropdown.textContent = 'English';
+      dropdownButton.textContent = 'English';
       target = 'en';
       break;
     case 'fr':
-      dropdown.textContent = 'French';
+      dropdownButton.textContent = 'French';
       target = 'fr';
       break;
     default:

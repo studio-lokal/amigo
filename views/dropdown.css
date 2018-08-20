@@ -49,6 +49,8 @@
   border-radius: 6px;
   list-style-type: none;
   display: none;
+  max-height: 126px;
+  overflow-y: auto;
 }
 .dropdown.open .dropdown-menu {
   display: block;
