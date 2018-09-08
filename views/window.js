@@ -42,10 +42,19 @@ search.onkeyup = function(event) {
 window.document.getElementById("copy").onclick = copy;
 
 // dropdown action
-const dropdownMenu = window.document.querySelector('.dropdown-menu');
+const dropdownMenu = window.document.querySelector('.amigo__header .dropdown-menu');
+const tobedropdownMenu = window.document.querySelector('.amigo__tobe .dropdown-menu');
 // 1. button click,
-const dropdownButton = window.document.querySelector('.dropdown button');
+const dropdownButton = window.document.querySelector('.amigo__header .dropdown button');
 dropdownButton.onclick = function() {
+  if(this.parentNode.classList.contains('open')) {
+    this.parentNode.classList.remove('open');
+  } else {
+    this.parentNode.classList.add('open');
+  }
+}
+const tobedropdownButton = window.document.querySelector('.amigo__tobe .dropdown button');
+tobedropdownButton.onclick = function() {
   if(this.parentNode.classList.contains('open')) {
     this.parentNode.classList.remove('open');
   } else {
@@ -71,10 +80,23 @@ Object.keys(langCodes).forEach(key => {
   console.log(key, langCodes[key]);
 });
 
+Object.keys(langCodes).forEach(key => {
+  const dropdownItem = document.createElement('li');
+  dropdownItem.classList.add('dropdown-item');
+  dropdownItem.setAttribute('value', key);
+  dropdownItem.textContent = langCodes[key].name;
+  tobedropdownMenu.appendChild(dropdownItem);
+  console.log(key, langCodes[key]);
+});
+
 // 2. list item click
-const dropdownItems = window.document.querySelectorAll('.dropdown-item');
+const dropdownItems = window.document.querySelectorAll('.amigo__header .dropdown-item');
+const tobeItems = window.document.querySelectorAll('.amigo__tobe .dropdown-item');
 
 dropdownItems.forEach(item => {
+  item.addEventListener('click', changingLanguage);
+})
+tobeItems.forEach(item => {
   item.addEventListener('click', changingLanguage);
 })
 function changingLanguage () {

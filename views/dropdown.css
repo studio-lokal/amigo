@@ -3,10 +3,11 @@
 .dropdown {
   margin: -8px;
   position: absolute;
-  left: 100px;
+  right: 50px;
   top: 13px;
   z-index: 1;
   font-family: 'Apple SD Gothic Neo', 'AppleGothic', Apple SD Gothic Neo !important;
+  min-width: 140px;
 }
 .dropdown.open button.dropdown-toggle:after {
   background-image: url("./img/ico-drop_up.png")
@@ -18,7 +19,7 @@
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  text-align: center;
+  text-align: right;
   color: #777777;
   cursor: pointer;
   position: relative;
@@ -26,6 +27,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
   height: 40px;
 }
 .dropdown .dropdown-toggle:focus {
@@ -44,7 +46,6 @@
 .dropdown .dropdown-menu {
   padding: 0px;
   box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 0.12);
-  /* border: solid 1px #d0d1d2; */
   margin-top: -10px;
   border-radius: 6px;
   list-style-type: none;
@@ -61,7 +62,7 @@
   font-style: normal;
   font-stretch: normal;
   cursor: pointer;
-  color: #777777;
+  color: #333333;
   padding: 0px 10px;
   min-height: 41px;
   line-height: 41px;

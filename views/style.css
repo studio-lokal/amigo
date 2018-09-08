@@ -130,11 +130,11 @@ html, body {
   opacity: .5;
 }
 
-.amigo__tobe div {
+.amigo__tobe .toast {
   visibility: hidden;
   min-width: 50px;
-  background-color: #ffffff;
-  color: #00aeff;
+  background-color: #00aeff;
+  color: #ffffff;
   text-align: center;
   border-radius: 5px;
   padding: 5px;
@@ -142,6 +142,31 @@ html, body {
   z-index: 1;
   right: 12px;
   top: 35px;
+}
+
+.amigo__tobe .dropdown {
+  top: 9px;
+  /* background-color: #00aeff;
+  color: #ffffff; */
+}
+
+.amigo__tobe .dropdown .dropdown-toggle {
+  height: 35px;
+  color: #ffffff;
+}
+
+.amigo__tobe .dropdown .dropdown-toggle:after {
+  background: url("./img/ico-drop_down(white).png") no-repeat center transparent;
+}
+
+.amigo__tobe .dropdown.open button.dropdown-toggle:after {
+  background-image: url("./img/ico-drop-up(white).png")
+}
+
+.amigo__tobe .dropdown .dropdown-menu .dropdown-item {
+  color: #333333;
+  background: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .amigo__tobe div.active {

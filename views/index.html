@@ -11,10 +11,7 @@
       <img class="amigo__header--logo" src="./img/logo.png" alt="">
       <div class="dropdown default-dropdown">
         <button class="dropdown-toggle" type="button" data-toggle="dropdown">Select</button>
-        <ul class="dropdown-menu">
-          <!-- <li class="dropdown-item" value="ko">Korean</li>
-          <li class="dropdown-item" value="en">English</li>
-          <li class="dropdown-item" value="fr">French</li> -->
+        <ul class="dropdown-menu" id="dropdown--asis">
         </ul>
       </div>
       <button id="close-window" class="amigo__header--close"></button>
@@ -24,9 +21,14 @@
       <button id="btn-search"></button>
     </div>
     <div class="amigo__tobe">
+      <div class="dropdown default-dropdown">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown">Select</button>
+        <ul class="dropdown-menu" id="dropdown--asis">
+        </ul>
+      </div>
       <textarea id="translated-text" ></textarea>
       <span id="copy">COPY</span>
-      <div id="toaster">Copied!</div>
+      <div id="toaster" class="toast">Copied!</div>
     </div>
   </div>
   <script src="window.js"></script>
