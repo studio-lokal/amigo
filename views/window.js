@@ -9,7 +9,7 @@ let target = "";
 const button = window.document.getElementById("btn-search");
 button.onclick = function() {
   const text = window.document.getElementById("text").value.trim();
-  console.log('target:: ' + target);
+  console.log("target:: " + target);
   ipcRenderer.send("search", { text, target });
   ipcRenderer.once("async-search", (e, success, result) => {
     if (success) {
@@ -42,25 +42,33 @@ search.onkeyup = function(event) {
 window.document.getElementById("copy").onclick = copy;
 
 // dropdown action
-const dropdownMenu = window.document.querySelector('.amigo__header .dropdown-menu');
-const tobedropdownMenu = window.document.querySelector('.amigo__tobe .dropdown-menu');
+const dropdownMenu = window.document.querySelector(
+  ".amigo__header .dropdown-menu"
+);
+const tobedropdownMenu = window.document.querySelector(
+  ".amigo__tobe .dropdown-menu"
+);
 // 1. button click,
-const dropdownButton = window.document.querySelector('.amigo__header .dropdown button');
+const dropdownButton = window.document.querySelector(
+  ".amigo__header .dropdown button"
+);
 dropdownButton.onclick = function() {
-  if(this.parentNode.classList.contains('open')) {
-    this.parentNode.classList.remove('open');
+  if (this.parentNode.classList.contains("open")) {
+    this.parentNode.classList.remove("open");
   } else {
-    this.parentNode.classList.add('open');
+    this.parentNode.classList.add("open");
   }
-}
-const tobedropdownButton = window.document.querySelector('.amigo__tobe .dropdown button');
+};
+const tobedropdownButton = window.document.querySelector(
+  ".amigo__tobe .dropdown button"
+);
 tobedropdownButton.onclick = function() {
-  if(this.parentNode.classList.contains('open')) {
-    this.parentNode.classList.remove('open');
+  if (this.parentNode.classList.contains("open")) {
+    this.parentNode.classList.remove("open");
   } else {
-    this.parentNode.classList.add('open');
+    this.parentNode.classList.add("open");
   }
-}
+};
 
 // langInfo.translationKeys.forEach(lang => {
 //   if(lang !== 'unk') {
@@ -72,45 +80,49 @@ tobedropdownButton.onclick = function() {
 //   }
 // });
 Object.keys(langCodes).forEach(key => {
-  const dropdownItem = document.createElement('li');
-  dropdownItem.classList.add('dropdown-item');
-  dropdownItem.setAttribute('value', key);
+  const dropdownItem = document.createElement("li");
+  dropdownItem.classList.add("dropdown-item");
+  dropdownItem.setAttribute("value", key);
   dropdownItem.textContent = langCodes[key].name;
   dropdownMenu.appendChild(dropdownItem);
   console.log(key, langCodes[key]);
 });
 
 Object.keys(langCodes).forEach(key => {
-  const dropdownItem = document.createElement('li');
-  dropdownItem.classList.add('dropdown-item');
-  dropdownItem.setAttribute('value', key);
+  const dropdownItem = document.createElement("li");
+  dropdownItem.classList.add("dropdown-item");
+  dropdownItem.setAttribute("value", key);
   dropdownItem.textContent = langCodes[key].name;
   tobedropdownMenu.appendChild(dropdownItem);
   console.log(key, langCodes[key]);
 });
 
 // 2. list item click
-const dropdownItems = window.document.querySelectorAll('.amigo__header .dropdown-item');
-const tobeItems = window.document.querySelectorAll('.amigo__tobe .dropdown-item');
+const dropdownItems = window.document.querySelectorAll(
+  ".amigo__header .dropdown-item"
+);
+const tobeItems = window.document.querySelectorAll(
+  ".amigo__tobe .dropdown-item"
+);
 
 dropdownItems.forEach(item => {
-  item.addEventListener('click', changingLanguage);
-})
+  item.addEventListener("click", changingLanguage);
+});
 tobeItems.forEach(item => {
-  item.addEventListener('click', changingLanguage);
-})
-function changingLanguage () {
-  switch (this.getAttribute('value')) {
-    case 'ko':
-      dropdownButton.textContent = 'Korean';
+  item.addEventListener("click", changingLanguage);
+});
+function changingLanguage() {
+  switch (this.getAttribute("value")) {
+    case "ko":
+      dropdownButton.textContent = "Korean";
       break;
-    case 'en':
-      dropdownButton.textContent = 'English';
-      target = 'en';
+    case "en":
+      dropdownButton.textContent = "English";
+      target = "en";
       break;
-    case 'fr':
-      dropdownButton.textContent = 'French';
-      target = 'fr';
+    case "fr":
+      dropdownButton.textContent = "French";
+      target = "fr";
       break;
     default:
       break;
@@ -138,12 +150,10 @@ function copy() {
 function toast() {
   const toastEle = document.getElementById("toaster");
 
-  // Add the "show" class to DIV
-  toastEle.className = "active";
+  toastEle.classList.add("active");
 
-  // After 3 seconds, remove the active class
   setTimeout(function() {
-    toastEle.className = toastEle.className.replace("active", "");
+    toastEle.classList.remove("active");
   }, 3000);
 }
 
